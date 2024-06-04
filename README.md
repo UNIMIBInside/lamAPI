@@ -54,6 +54,11 @@ Ensure you have the necessary permissions set on local volume folders. This can 
 
 ./setup-docker-volume.sh
 
+> [!WARNING]
+> If ElasticSearch returns an error similar to the following: `node validation exception\n[1] bootstrap checks failed. You must address the points described in the following [1] lines before starting Elasticsearch.\nbootstrap check failure [1] of [1]: max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]`, please run the following command: `sudo sysctl -w vm.max_map_count=262144`
+
+> [!NOTE]
+> Please be aware of the permissions of every folder in the repository before running the `docker-compose up -d` command
 
 ### Starting the Services
 
